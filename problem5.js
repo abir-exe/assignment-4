@@ -1,21 +1,20 @@
-let array = [10, 20, 30, 40];
-function canPay(array, number) {
-
-
+let changeArray = [];
+function canPay(changeArray, totalDue) {
     let sum = 0;
-
-    for (let i = 0; i < array.length; i++) {
-        sum = sum + array[i];
+    for (let i = 0; i < changeArray.length; i++) {
+        sum = sum + changeArray[i];
     }
-
-    if (sum >= number) {
+    if (sum >= totalDue) {
         return true;
     } 
-    else if (array.length === 0) {
-        return 'you are poor';
+    else if (changeArray.length === 0) {
+        return 'Sorry, you do not have enough money';
     } 
     else {
         return false;
     }
 }
-console.log(canPay(array, 100));
+console.log(canPay(changeArray, 50));
+
+
+// problem 5 complete ----------- no need to change anything
